@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Script to configure SSH client settings
+
+# Create SSH config with secure settings
+cat > ~/.ssh/config << EOF
+Host *
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
+EOF
