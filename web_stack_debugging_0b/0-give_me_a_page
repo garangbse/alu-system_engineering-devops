@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Fix Apache to serve a page with "Hello Holberton"
+
+# Start Apache service
+service apache2 start
+
+# Create index.html with required content
+echo "Hello Holberton" > /var/www/html/index.html
+
+# Ensure Apache is running in foreground to keep container alive
+apache2ctl -D FOREGROUND
