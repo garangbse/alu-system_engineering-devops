@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# Script that uses ssh to connect to server using private key ~/.ssh/school with user ubuntu
-
-ssh -i ~/.ssh/school ubuntu@98.98.98.98
+#Script that uses ssh to connect to your server
+ssh -i ~/.ssh/school ubuntu@6571-web-01
