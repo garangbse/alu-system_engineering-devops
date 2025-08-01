@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
-# Fix Apache to serve a page with "Hello Holberton"
+# make apache server that returns Hello Holberton 
 
-# Start Apache service
-service apache2 start
-
-# Create index.html with required content
-echo "Hello Holberton" > /var/www/html/index.html
-
-# Ensure Apache is running in foreground to keep container alive
-apache2ctl -D FOREGROUND
+sudo apt-get update -y
+sudo apt-get install -y apache2
+sudo /etc/init.d/apache2 start
+echo "Hello Holberton" | sudo tee -a /var/www/html/index.html"
+sudo /etc/init.d/apache2 restart
